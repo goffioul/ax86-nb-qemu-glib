@@ -23,7 +23,9 @@
 #include "config.h"
 #include <string.h>
 
+#ifndef __ANDROID__
 #include "gi18n.h"
+#endif
 #include "gstrfuncs.h"
 #include "grand.h"
 #include "gmessages.h"

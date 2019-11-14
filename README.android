@@ -1,0 +1,10 @@
+To recreate initial glib headers for Android:
+- copy android.txt.in into android.txt and make appropriate edits
+- meson srcdir builddir --cross-file android.txt
+- post-procress config.h to disable:
+	. ENABLE_NLS
+	. HAVE_LANGINFO_ABALTMON
+	. HAVE_LANGINFO_ALTMON
+	. HAVE_LANGINFO_OUTDIGIT
+
+See: https://github.com/mesonbuild/meson/blob/master/docs/markdown/Cross-compilation.md

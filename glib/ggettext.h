@@ -60,4 +60,8 @@ const gchar *g_dpgettext2    (const gchar *domain,
 
 G_END_DECLS
 
+#ifdef __ANDROID__
+#define g_dngettext dngettext
+#endif
+
 #endif /* __G_GETTEXT_H__ */

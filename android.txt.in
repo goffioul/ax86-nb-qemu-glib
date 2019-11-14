@@ -1,0 +1,18 @@
+[host_machine]
+system = 'android'
+cpu_family = 'x86'
+cpu = 'i686'
+endian = 'little'
+
+[properties]
+c_args = ['-m32']
+c_link_args = ['-m32']
+cpp_args = ['-m32']
+cpp_link_args = ['-m32']
+sys_root = '@@AOSP_ROOT@@'
+
+[binaries]
+c = '@@AOSP_ROOT@@/prebuilts/clang/host/linux-x86/clang-@@CLANG_VERSION@@/bin/clang'
+cpp = '@@AOSP_ROOT@@/prebuilts/clang/host/linux-x86/clang-@@CLANG_VERSION@@/bin/clang++'
+ar = '@@AOSP_ROOT@@/prebuilts/clang/host/linux-x86/clang-@@CLANG_VERSION@@/bin/llvm-ar'
+strip = '@AOSP_ROOT@@/prebuilts/clang/host/linux-x86/clang-@@CLANG_VERSION@@/bin/llvm-strip'
